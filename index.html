@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Gift Tracker</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container">
+    <br>
+    <!--Created a header for the text, Gift tracker.-->
+    <h1 class="text-center text-success font-weight-bold">Gift Tracker</h1>
+    <br>
+    <div class="card bg-light border-success mb-3">
+        <div class="card-body">
+            <!--Creating the first row for two input sections. I used bootsrap and CSS to style. The placeholder text
+            could only be targeted through CSS-->
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-name">Who is the gift for?</label>
+                            <input type="text" class="form-control bg-danger text-white form-control-lg" id="new-name" placeholder="Lucky Person's Name!">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-gift">What is the gift?</label>
+                            <input type="text" class="form-control bg-success text-white form-control-lg" id="new-gift" placeholder="What could it be?">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!--Created a row for the second input columns, which are date fields.-->
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-order-date">When did you order it?</label>
+                        <input type="date" class="form-control" id="new-order-date">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-arrival-date">When should it be here?</label>
+                        <input type="date" class="form-control" id="new-arrival-date">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!--Created a button to log the input information with the class log-button so I can select it wiht my CSS sheet.-->
+            <div">
+                <button id="log" class="btn btn-success btn-lg form-control log-button">Log It!</button>
+            </div>
+        </div>    
+    </div>
+            <!--Created a table that will hold the input information.-->
+    <table id="list" class="table table-danger table-striped ">
+        <tr>
+            <th>Gift Reciever</th>
+            <th>Gift</th>
+            <th>Gift Order Date</th>
+            <th>Gift Arrival Date</th>
+            <th>It's Here!</th>
+        </tr>
+    </table>
+
+
+            <!--linking to the js file, jquery and bootstrap.-->
+ <script src="gifttracker.js"></script>   
+ <script src="node_modules/jquery/dist/jquery.js"></script>
+ <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
